@@ -95,7 +95,7 @@
 			if (!options.silent) console.log("  Querying "+packageName);
 
 			npm.commands.view(args,true,function(err,deps){
-				if (err && err.statusCode && err.statusCode===404) return done(packageName);
+				//if (err && err.statusCode && err.statusCode===404) return done(packageName);
 				if (err) return callback(err);
 				if (!deps) return callback("Package '"+packageName+"' was not found in npm.");
 
